@@ -16,12 +16,12 @@ ACHIEVEMENTS = [
     "Sharp Mind",
     "Hidden Path Finder",
 ]
-MIN_PLAYERS = 5
-MAX_PLAYERS = 10
+MIN_ACHIEVEMENTS = 5
+MAX_ACHIEVEMENTS = 10
 
 
 def gen_player_achievements() -> set[str]:
-    count = random.randint(MIN_PLAYERS, MAX_PLAYERS)
+    count = random.randint(MIN_ACHIEVEMENTS, MAX_ACHIEVEMENTS)
     player_achievements = random.sample(ACHIEVEMENTS, count)
     return set(player_achievements)
 
@@ -35,6 +35,7 @@ def main() -> None:
     achievements = set(ACHIEVEMENTS)
     all_distinct = set.union(alice, bob, charlie, dylan)
 
+    print("=== Achievement Tracker System ===\n")
     print(f"Player Alice: {alice}")
     print(f"Player Bob: {bob}")
     print(f"Player Charlie: {charlie}")
